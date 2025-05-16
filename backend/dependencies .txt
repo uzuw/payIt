@@ -1,0 +1,13 @@
+the following dependencies are used in this application 
+
+
+node: express mongoose dotenv 
+
+dev: nodemon
+
+bcrypt jsonwebtoken
+
+cors body-parser
+
+
+

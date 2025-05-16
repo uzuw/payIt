@@ -1,0 +1,10 @@
+@config "../tailwind.config.js";
+
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Recursive:wght@300..1000&display=swap');
+
+@import "tailwindcss";
+
+/* Optional: Add to your global styles or Tailwind layer if needed */
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition;
+}
