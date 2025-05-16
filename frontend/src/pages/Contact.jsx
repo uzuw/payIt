@@ -22,11 +22,34 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Feedback submitted:', formData);
-    setSubmitted(true);
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log('Submitting feedback:', formData);
+
+  try {
+    const response = await fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+    console.log("Server response:", data);
+
+    if (response.ok) {
+      setSubmitted(true);
+    } else {
+      alert(data.error || "Something went wrong while sending your message.");
+    }
+  } catch (error) {
+    console.error("Network error:", error);
+    alert("Something went wrong while sending your message.");
+  }
+};
+
+
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
