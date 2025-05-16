@@ -1,7 +1,7 @@
 
 # PAY IT WEB APP 
 
-Pay it app is a simple web app that helps client pay their home utility bills and also **record** them to the database which can be reviewed and kept track on later on
+Pay it app is a simple web app that helps client pay their home utility bills and also **record** them to the database which can be reviewed and kept track later on
 
 This app is ONLY for the clients in Nepal as it uses the Esewa and Khalti merchant API's. 
 
